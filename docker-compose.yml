@@ -13,7 +13,7 @@ services:
     restart: always
     volumes:
       - ./config:/mosquitto/config:ro
-      - ./data:/mosquitto/data
-      - ./log:/mosquitto/log
+      - ./data:/mosquitto/data:rw
+      - ./log:/mosquitto/log:rw
     ports:
       - 1883:1883
